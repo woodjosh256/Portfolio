@@ -1,0 +1,451 @@
+/*
+ site-wide constants
+ */
+:root {
+    --dark-green: #404e4d;
+    --gray: #646881;
+    --teal: #62BEC1;
+    --blue: #5AD2F4;
+    --pink: #EE4266;
+    --off-white: #E7E8EE;
+
+    --shadow-x: 1px;
+    --shadow-y: 1px;
+    --shadow-blur: 3px;
+}
+
+
+/*
+ general styles
+ */
+*, *:before, *:after {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    font-size: 2vw;
+}
+
+/* small devices (tablets) */
+@media only screen and (min-width: 768px) {
+    *, *:before, *:after {
+        font-size: 10px;
+    }
+}
+
+/* medium devices (laptops/desktops) */
+@media only screen and (min-width: 992px) {
+    *, *:before, *:after {
+        font-size: 12px;
+    }
+}
+
+/* large devices (larger laptops/desktops) */
+@media only screen and (min-width: 1200px) {
+    *, *:before, *:after {
+        font-size: 14px;
+    }
+}
+
+body {
+    background-color: var(--teal);
+    background-image: url("../images/background_pattern.png");
+    margin: auto;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main, .footer-content {
+    margin: auto
+}
+
+footer {
+    background-color: var(--gray);
+    border-top-style: solid;
+    border-color: var(--dark-green);
+    border-width: 3px;
+    display: flex;
+    align-items: center;
+}
+
+input, textarea {
+    width: 100%;
+    display: block;
+    border: 3px solid var(--dark-green);
+    border-radius: 10px;
+    margin: .5em 0;
+    font-size: 2rem;
+    padding: .25em;
+    color: var(--dark-green);
+    background-color: var(--off-white);
+    font-family: Cambria, serif;
+}
+
+textarea {
+    height: 10em;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--dark-green);
+}
+
+input::-ms-input-placeholder {
+    color: var(--dark-green);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--pink);
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+    margin: 0 0 .25em 0;
+    font-weight: normal;
+}
+
+h1, h2 {
+    color: var(--dark-green);
+    font-family: Cambria, serif;
+}
+
+h3, h4, p {
+    color: var(--off-white);
+}
+
+/* heading for top of page */
+h1 {
+    font-size: 8rem;
+    text-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--dark-green);
+}
+
+/* subheading for top of page */
+h2 {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: .25em;
+}
+
+/* section heading */
+h3 {
+    font-size: 4rem;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+}
+
+/* adapted from https://stackoverflow.com/a/37338297 */
+h3:after {
+    border-bottom: 5px solid var(--off-white);
+    content: "";
+    display: block;
+    margin-left: calc((100% - 3vw) / 2);
+    width: 3vw;
+}
+
+/* section subheading */
+h4 {
+    font-size: 2.5rem;
+    color: #CFD0D6
+;
+}
+
+p {
+    font-size: 2rem;
+    text-align: left;
+}
+
+li {
+    font-size: 3rem;
+    display: inline-block;
+    color: var(--off-white);
+}
+
+/*
+ specific styles
+ */
+
+/* for divs that are the height of the user's browser */
+.fill-screen {
+    min-height: 100vh;
+    position: relative;
+}
+
+.top-area {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10vh;
+    justify-content: center;
+}
+
+.profile-pic-section {
+    flex-grow: 2;
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vw;
+    margin: auto;
+}
+
+.profile-img, .profile-shadow {
+    width: 85%;
+    height: 85%;
+}
+
+.profile-img {
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid var(--teal);
+}
+
+.profile-shadow {
+    margin-top: 15%;
+    margin-left: 10%;
+    z-index: -1;
+    position: absolute;
+
+    background-color: var(--dark-green);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.horiz-img {
+    width: 60%;
+    height: auto;
+}
+
+.vertical-img {
+    width: 25%;
+    display: inline-block;
+    float: right;
+    margin: 1em;
+}
+
+.horiz-img, .vertical-img {
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+
+.vertical-img-left {
+    float: left;
+}
+
+.title-section {
+    flex-grow: 3;
+    width: 100%;
+    padding: 1em;
+}
+
+.main-subtitle-p {
+    display: block;
+}
+
+.contact-icon-group {
+    display: inline;
+    width: 100%;
+ }
+
+.contact-icon-group a {
+    text-decoration: none;
+}
+
+.contact-icon-group a img {
+    height: 3rem;
+    min-height: 8mm;
+    margin-right: 1em;
+
+    /* dark green filter */
+    filter: invert(27%) sepia(8%) saturate(815%) hue-rotate(126deg) brightness(97%) contrast(87%);
+}
+
+.contact-icon-group a img:hover {
+    /* gray filter */
+    filter: invert(37%) sepia(100%) saturate(2192%) hue-rotate(324deg) brightness(96%) contrast(94%);
+}
+
+.header {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: min-content;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1em;
+    padding-top: .5em;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 200vw;
+    left: -100vw;
+    top: 0;
+    /*background-color: var(--teal);*/
+    /*border-bottom-style: solid;*/
+    border-color: var(--dark-green);
+    border-width: 3px;
+    z-index: -1;
+}
+
+.nav-button, .submit-button {
+    font-family: Cambria, serif;
+    border-radius: 10px;
+    border-color: var(--dark-green);
+    border-width: 3px;
+    border-style: solid;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: background 1s, color 1s, border-radius 1s;
+}
+
+.nav-button {
+    color: var(--dark-green);
+    background-color: var(--blue);
+    padding: .25em .35em;
+}
+
+.submit-button {
+    color: var(--off-white);
+    background-color: var(--pink);
+    padding: .15em .35em;
+}
+
+.nav-button:hover {
+    background: var(--pink);
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    color: var(--off-white);
+    transition: color .15s .05s, background .15s .05s, border-radius .15s .05s;
+}
+
+.submit-button:hover {
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    transition: border-radius .15s .05s;
+}
+
+.content-separator {
+    background-color: var(--gray);
+    border: 3px solid var(--dark-green);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px;
+    display: inline-block;
+
+    margin: 1em auto 2em;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+.skills-box {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+/* Page content */
+.content {
+    padding: 16px;
+}
+
+.contact-form {
+    display: block;
+}
+
+.footer-content {
+    display: block;
+    background-color: var(--blue);
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    border: 3px solid var(--dark-green);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px;
+
+}
+
+.project-date {
+    width: 100%;
+    text-align: right;
+    display: block;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.sticky:before {
+    background-color: var(--teal);
+    border-bottom-style: solid;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 102px;
+}
+
+/*
+ responsive design - resize/move elements for different screen sizes
+ */
+
+/* small devices (tablets) */
+@media only screen and (min-width: 768px) {
+    main, .footer-content, .sticky {
+        width: 750px;
+    }
+
+    .top-area {
+        flex-wrap: nowrap;
+    }
+
+    .title-section {
+        order: 1;
+    }
+
+    .profile-pic-section {
+        order: 2;
+        max-width: 40%;
+        max-height: 40%;
+    }
+
+    .main-subtitle-p {
+        padding-left: 50px;
+    }
+
+    .footer-content {
+        width: 600px;
+    }
+}
+
+/* medium devices (laptops/desktops) */
+@media only screen and (min-width: 992px) {
+    main, .footer-content, .sticky {
+        width: 970px;
+    }
+
+    .footer-content {
+        width: 800px;
+    }
+}
+
+/* large devices (larger laptops/desktops) */
+@media only screen and (min-width: 1200px) {
+    main, .footer-content, .sticky {
+        width: 1170px;
+    }
+
+    .footer-content {
+        width: 1000px;
+    }
+}
+

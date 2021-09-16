@@ -1,164 +1,122 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+<html lang="en">
+<head>
     <title>Josh Wood</title>
-    <link href="style.css" rel="stylesheet" type="text/css" >
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
-  </head>
-  <body>
-    <div class="stripHolder" id="header">
-      <div class="stripContent" style="text-align: left;">
-          <h2 style="font-size: 2em; float: left;">
-            Josh Wood
-          </h2>
-      </div>
-    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
     <main>
-      <div class="stripHolder" id="about">
-        <div class="stripContent">
-          <div id="aboutText">
-            <h1 style="font-size: 5em;">
-              About
-            </h1>
-            <p>
-              Four years ago, I started coding small games on my TI-84 graphing calculator. I quickly developed a passion for programming and loved how one could create nearly anything just by writing lines of code. I soon moved on to other more capable languages, primarily Python and Java. I began to spend a lot of my free time on small programming projects and even co-founded my high school’s coding club. I’ve decided that I want to turn my passion for programming into my career. I am now studying software engineering at the University of Wisconsin – Platteville.
-            </p>
-            <p>
-              Outside of programming, I like to spend my time mountain biking, hiking/backpacking, and listening to music. A long-term goal of mine is to thru-hike the Appalachian Trail.
-            </p>
-          </div>
-          <img id="pictureOfMe" src="picture_of_me.jpg">
-        </div>
-      </div>
-      <div class="stripHolder" id="skills">
-        <div class="stripContent">
-          <h1>
-            Skills
-          </h1>
-          <table id="skillTable">
-            <tr>
-              <td class="skillTitle">
-                Python
-              </td>
-              <td class="skillValue">
-                <div id="pythonSkill" class="skill">
-                  Intermediate
+        <div class="fill-screen">
+            <div class="top-area">
+                <div class="profile-pic-section">
+                    <span class="profile-shadow"></span>
+                    <img src="images/professional_profile_picture.jpg" alt="picture of josh wood" class="profile-img">
                 </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="skillTitle">
-                Java
-              </td>
-              <td class="skillValue">
-                <div id="javaSkill" class="skill">
-                  Intermediate
+                <div class="title-section">
+                    <h1>Josh Wood</h1>
+                    <div class="main-subtitle-p">
+                        <h2>Software engineering student at UW-Platteville
+                            and freelance developer</h2>
+                        <div class="contact-icon-group">
+                            <a href="https://www.linkedin.com/in/josh-wood-a115a91b0/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn icon"></a>
+<!--                            <a href="#"><img src="images/github.svg" alt="Github icon"></a>-->
+                            <a href="#" class="email-icon"><img src="images/email.svg" alt="email icon"></a>
+                        </div>
+                    </div>
                 </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="skillTitle">
-                HTML/CSS
-              </td>
-              <td class="skillValue">
-                <div id="htmlSkill" class="skill">
-                  Competent
+            </div>
+            <div class="header" id="header">
+                <button class="nav-button nav-button-about">About</button>
+                <button class="nav-button nav-button-projects">Projects</button>
+                <button class="nav-button nav-button-contact">Contact</button>
+            </div>
+        </div>
+        <div class="page-content" id="content">
+            <h1 class="about-section">About me</h1>
+            <div class="content-separator">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <img src="images/hiking_picture.png" class="horiz-img">
+            </div>
+            <div class="content-separator">
+                <h3>Skills</h3>
+                <ul class="skills-box">
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <h1 class="projects-section">Projects</h1>
+            <div class="content-separator">
+                <div class="project-date">
+                    <h4>Summer, Fall 2020</h4>
                 </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="skillTitle">
-                JavaScript
-              </td>
-              <td class="skillValue">
-                <div id="jsSkill" class="skill">
-                  Beginner
+                <h3>Calf Hero</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <img src="images/calf_hero_screenshot.png" alt="screenshot of calf-hero application" class="horiz-img">
+            </div>
+            <div class="content-separator">
+                <div class="project-date">
+                    <h4>Spring 2020</h4>
                 </div>
-              </td>
-            </tr>
-          </table>
+                <h3>NRC Calculator</h3>
+                <img src="images/nrc_screenshot.png" alt="screenshot of nrc calculator app" class="vertical-img">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="content-separator">
+                <div class="project-date">
+                    <h4>Fall 2019</h4>
+                </div>
+                <h3>Whole Milk Calculator</h3>
+                <img src="images/wmc_screenshot.png" alt="screenshot of whole milk calculator app" class="vertical-img vertical-img-left">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="content-separator">
+                <div class="project-date">
+                    <h4>Spring 2019</h4>
+                </div>
+                <h3>The Journey of Bella Shores</h3>
+                <p>paragraph</p>
+                <img src="images/bella_shores_screenshot.png" alt="animation of the journey of bella shores game" class="horiz-img">
+            </div>
+            <div class="content-separator">
+                <div class="project-date">
+                    <h4>Spring 2019</h4>
+                </div>
+                <h3>Poe - The Autonomous Poet</h3>
+                <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@joshwood/Poe-v03?lite=true&outputonly=1"></iframe>
+            </div>
+            <div class="content-separator">
+                <div class="project-date">
+                    <h4>Spring 2018</h4>
+                </div>
+                <h3>Circulo</h3>
+                <img src="images/circulo_screenshot.png" alt="screenshot of circulo mobile game" class="vertical-img">
+                <p>about circulo</p>
+            </div>
         </div>
-      </div>
-      <div class="stripHolder" id="portfolioTitle">
-        <div class="stripContent">
-          <h1>
-            Projects
-          </h1>
-        </div>
-      </div>
-      <div class="stripHolder" id="portfolio">
-        <div class="stripContent">
-          <div class="materialHolder">
-            <div style="float: left; width: 73%; text-align: left;">
-              <h2>
-                Whole Milk Calculator
-              </h2>
-              <h3>
-                Summer 2019
-              </h3>
-              <p>
-                I worked with technical and marketing experts at <a href="https://www.milkproductsinc.com/" target="_blank">Milk Products</a> (a division of <a href="https://www.landolakesinc.com/" target="_blank">Land O’Lakes</a>) to develop an easy-to-use app that helps calf raisers effectively feed their calves. The app is programmed using HTML/CSS/JavaScript with <a href="https://phonegap.com/" target="_blank">Adobe PhoneGap</a>. Some of the challenges for this project included finding a way to write the code so it meets budget/time constraints, as well as finding a way for the app to support two different languages. Programming the Whole Milk Calculator app was my first paid programming project, as well as my first project with HTML/CSS/JavaScript. The app will be available on Google Play and the App Store within the next few weeks.
-              </p>
-            </div>
-            <div style="float: right; width: 25%; text-align: center;">
-              <img src="WholeMilkCalculatorScreenshot.jpg" id="WMCScreenshot">
-            </div>
-          </div>
-          <div style="padding: 10px;"></div>
-          <div class="materialHolder">
-            <h2>
-              The Journey of Bella Shores
-            </h2>
-            <h3>
-              Spring 2019
-            </h3>
-            <p>
-              This was a game that I developed for a game jam run by <a href="https://repl.it/" target="_blank">Repl.it</a> (a game jam is a competition in which one develops a game that is related to a theme within a short period of time). Over about a month I created the game’s art, wrote the game’s story, and programmed it in Python (using <a href="https://www.pygame.org/wiki/about" target="=_blank">Pygame</a> for graphics). The most difficult parts of this project involved creating an engine that could manage each boat’s physics and collisions, making a system for displaying the UI elements, and figuring out how to randomly generate the map. If I were to do this project again, I would try to have fewer features and focus on making those features more thought out. I felt that in the end, each element of the game wasn’t very much fun because I had focused on adding as much as I could instead of taking time to plan each feature out well. The game and its code are embedded below.
-            </p>
-            <iframe height="600px" width="100%" src="https://repl.it/@joshwood/The-Journey-of-Bella-Shores-5?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-          </div>
-          <div style="padding: 10px;"></div>
-          <div class="materialHolder">
-            <div style="float: left; width: 73%; text-align: left;">
-              <h2>
-                Circulo
-              </h2>
-              <h3>
-                January 2018
-              </h3>
-              <p>
-                This simple game was the first app I ever made, as well as my first project in Java. I made it mainly just for fun and to learn about Android development. The game involves tapping circles at specific times and trying to last as long as possible without making a mistake. The video on the right demonstrates this. My programming skills (especially in Java) have grown a lot since I made the app, so if I were to continue this project, I would structure the code differently to allow future changes. Also, if I were to continue working on this project, I would improve its page on Google Play to attract more users. (The app has been online for over a year and only has ~130 downloads.)
-              </p>
-              <p>
-                Circulo's page on Google Play can be viewed <a href="https://play.google.com/store/apps/details?id=com.joshwoodstudios.circulo&hl=en_US" target="_blank">here.</a>
-              </p>
-            </div>
-            <div style="float: right; width: 25%; text-align: center;">
-              <video id="circuloScreenshot" controls>
-                <source src="circulo_video.mp4" type="video/mp4">
-              Your browser does not support this video.
-              </video>
-            </div>
-          </div>
-          <div style="padding: 10px;"></div>
-          <div class="materialHolder">
-            <h2>
-              Poe - The Autonomous Poet
-            </h2>
-            <h3>
-              February 2019
-            </h3>
-            <p>
-              This is a smaller project that I completed for an AI-themed code jam run by Repl.it (a code jam is a competition where one designs a program about a theme within a short period of time). The program reads a large text (usually a long book) to find which words commonly follow other words. It then attempts to use what it learned from the texts it read and the <a href="https://www.datamuse.com/api/" target="_blank">Datamuse API</a> to make a sonnet or haiku about a certain theme with a Markov Chain algorithm. The poems the program writes never make any sense, but reading what it makes can illustrate the writing style of the texts it read. This program didn't place in the competition but was listed as an honorable mention. The code and program can be viewed/tested below.
-            </p>
-            <iframe height="600px" width="100%" src="https://repl.it/@joshwood/Poe-v03?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-          </div>
-        </div>
-      </div>
     </main>
-    <div id="footer">
-    </div>
-  </body>
+    <footer>
+        <div class="footer-content">
+            <h1 class="contact">Contact me</h1>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/mknkkbql" method="POST">
+                    <input type="email" name="_replyto" placeholder="Your email" required>
+                    <input type="text" name="_subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <button type="submit" class="submit-button">Send</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="node_modules/jquery.scrollto/jquery.scrollTo.js"></script>
+
+    <script src="data/projects.js"></script>
+    <script src="scripts/SiteLoader.js"></script>
+</body>
 </html>

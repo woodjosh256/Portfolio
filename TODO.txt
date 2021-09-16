@@ -1,0 +1,22 @@
+Order of stuff to do
+
+HIGH PRIORITY
+Make about me section
+Make skills section
+Make projects section
+Make classes taken section
+Improve background - Simple mountains in the background?
+
+LOW PRIORITY
+Make classes taken/project selector
+Make photo album for about me
+
+
+Projects to include:
+
+calf hero
+NRC calculator
+Whole milk calculator
+The journey of bella shores
+Circulo
+Poe - The autonomous poet
