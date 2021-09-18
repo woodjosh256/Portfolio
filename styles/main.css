@@ -218,6 +218,7 @@ li {
 .horiz-img {
     width: 60%;
     height: auto;
+    margin: 1em;
 }
 
 .vertical-img {
