@@ -157,7 +157,7 @@ h4 {
 ;
 }
 
-p {
+p, a {
     font-size: 2rem;
     text-align: left;
 }
