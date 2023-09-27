@@ -1,7 +1,11 @@
+import { Container } from "./common/container";
+
 export function About() {
   return (
     <>
-      <p>about</p>
+      <Container>
+        <p>About me</p>
+      </Container>
     </>
   );
 }

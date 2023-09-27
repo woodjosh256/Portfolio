@@ -1,22 +1,57 @@
 import React, { ReactNode } from "react";
+import { Pages } from "../../App";
 
 interface SwitcherProps {
-    titles: Map<string, () => void>;
+  about: () => void;
+  projects: () => void;
+  contact: () => void;
 }
 
 export function Switcher(props: SwitcherProps) {
+  let [page, setPage] = React.useState<Pages>(Pages.ABOUT);
 
-    let titleComponents: Array<ReactNode> = []
-    
-    props.titles.forEach((fn, title) => titleComponents.push(
-        <p>{title}</p>
-    ));
+  function about() {
+    setPage(Pages.ABOUT);
+    props.about();
+  }
 
-    return (
-        <>
-            <div className="flex">
-                {titleComponents}
-            </div>
-        </>
-    );
+  function projects() {
+    setPage(Pages.PROJECTS);
+    props.projects();
+  }
+
+  function contact() {
+    setPage(Pages.CONTACT);
+    props.contact();
+  }
+
+  return (
+    <>
+      <ul className="flex flex-row justify-between">
+        <li
+          className={`font-slab font-black text-4xl md:text-5xl list-none cursor-pointer hover:text-sea-green ${
+            page == Pages.ABOUT ? "text-sea-green" : ""
+          }`}
+          onClick={about}
+        >
+          About
+        </li>
+        <li
+          className={`font-slab font-black text-4xl md:text-5xl list-none cursor-pointer hover:text-selective-yellow ${
+            page == Pages.PROJECTS ? "text-selective-yellow" : ""
+          }`}
+          onClick={projects}
+        >
+          Projects
+        </li>
+        <li
+          className={`font-slab font-black text-4xl md:text-5xl list-none cursor-pointer hover:text-big-red ${(page ==
+            Pages.CONTACT ? "text-big-red" : "")}`}
+          onClick={contact}
+        >
+          Contact
+        </li>
+      </ul>
+    </>
+  );
 }
