@@ -1,4 +1,4 @@
-export function Projects() {
+export function Experience() {
     return (
         <>
         <p>Projects</p>

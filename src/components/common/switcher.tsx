@@ -16,7 +16,7 @@ export function Switcher(props: SwitcherProps) {
   }
 
   function projects() {
-    setPage(Pages.PROJECTS);
+    setPage(Pages.EXPERIENCE);
     props.projects();
   }
 
@@ -38,11 +38,11 @@ export function Switcher(props: SwitcherProps) {
         </li>
         <li
           className={`font-slab font-black text-4xl md:text-5xl list-none cursor-pointer hover:text-selective-yellow ${
-            page == Pages.PROJECTS ? "text-selective-yellow" : ""
+            page == Pages.EXPERIENCE ? "text-selective-yellow" : ""
           }`}
           onClick={projects}
         >
-          Projects
+          Experience
         </li>
         <li
           className={`font-slab font-black text-4xl md:text-5xl list-none cursor-pointer hover:text-big-red ${(page ==
