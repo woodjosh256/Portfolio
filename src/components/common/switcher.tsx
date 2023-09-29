@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export function Switcher() {
     return (
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between mb-8">
             <NavLink
                 className={({isActive}) =>{
                     let classString = `font-slab font-black text-4xl md:text-5xl list-none cursor-pointer select-none hover:text-sea-green `;
@@ -14,7 +14,6 @@ export function Switcher() {
                     return classString;
                 }}
                 to={"/about"}
-                end
             >
                 About
             </NavLink>
@@ -29,7 +28,6 @@ export function Switcher() {
                     return classString;
                 }}
                 to={"/experience"}
-                end
             >
                 Experience
             </NavLink>
@@ -44,7 +42,6 @@ export function Switcher() {
                     return classString;
                 }}
                 to={"/contact"}
-                end
             >
                 Contact
             </NavLink>

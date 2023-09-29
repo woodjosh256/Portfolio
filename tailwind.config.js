@@ -14,6 +14,7 @@ export default {
       'dark-purple': '#38143D',
       'off-white': '#f8fafd',
       'sea-green': '#2CA6A4',
+      'light-sea-green': '#A6E7E6',
       'selective-yellow': '#fcba04',
       'big-red': '#C42021',
       'black': '#000000',

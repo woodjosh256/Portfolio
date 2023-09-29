@@ -15,8 +15,6 @@ export interface ExperienceItemData {
 
 export const FilterList = forwardRef<HTMLDivElement, FilterListProps>(
     (props, ref) => {
-        const [padding, setPadding] = useState(0);
-
         let components: ReactElement[] = [];
         let lastYear = 100000;
         props.experienceData.forEach((experienceItemData, index) => {
@@ -71,8 +69,7 @@ export const FilterList = forwardRef<HTMLDivElement, FilterListProps>(
             <div
                 ref={ref}
                 id="item-group"
-                className={`flex flex-col select-none ${props.className}`}
-                style={{ paddingBottom: `${padding}px` }}
+                className={`flex flex-col select-none pl-8 pb-4 ${props.className}`}
             >
                 {components}
             </div>

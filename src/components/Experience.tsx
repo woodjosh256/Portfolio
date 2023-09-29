@@ -3,6 +3,7 @@ import { ExperienceItemData, FilterList } from "./common/FilterList";
 import { ExpTypes, Tags, experiences } from "../assets/data";
 import { ExperienceItem } from "./common/ExperienceItem";
 import { YearScrollBar } from "./common/YearScrollBar";
+import { FilterSelector } from "./common/FilterSelector";
 
 export function Experience() {
     const [experienceData, setExperienceData] = useState<ExperienceItemData[]>(
@@ -10,7 +11,7 @@ export function Experience() {
     );
 
     const [tagFilters, setTagFilters] = useState<Tags[]>([]);
-    const [typeFilters, setTypeFilters] = useState<ExpTypes[]>([]);
+    const [typeFilters, setExpTypeFilters] = useState<ExpTypes[]>([]);
 
     const [currentExperience, setCurrentExperience] = useState<number>(0);
 
@@ -20,21 +21,27 @@ export function Experience() {
     function updateExperienceData() {
         let newExperienceData: ExperienceItemData[] = [];
 
-        let index = 0;
         for (let key in experiences) {
             let tagMatch = true;
+            let typeMatch = true;
             let experience = experiences[key];
 
             tagFilters.forEach((filterTag) => {
-                if (experience.tags.includes(filterTag)) {
+                if (!experience.tags.includes(filterTag)) {
                     tagMatch = false;
                 }
             });
 
-            if (tagMatch) {
+            typeFilters.forEach((filterType) => {
+                if (experience.type != filterType) {
+                    typeMatch = false;
+                }
+            });
+
+            if (tagMatch && typeMatch) {
                 newExperienceData.push({
                     component: (
-                        <ExperienceItem experience={experience} key={key} />
+                        <ExperienceItem experience={experience} key={key} id={key} />
                     ),
                     data: experience,
                 });
@@ -76,13 +83,15 @@ export function Experience() {
     return (
         <div
             ref={experienceRef}
-            className="flex-grow flex flex-row h-full max-h-full overflow-y-auto"
+            className="flex-grow flex flex-col h-full max-h-full overflow-y-auto pl-8"
         >
+            <FilterSelector setTagFilters={setTagFilters} setExpTypeFilters={setExpTypeFilters} />
+            <hr className="h-px mt-4 ml-12 mr-12 bg-gray border-0"/>
             <FilterList
                 ref={filterListRef}
                 experienceData={experienceData}
                 setCurrentExperience={setCurrentExperience}
-                className="flex-grow max-h-full overflow-y-auto pl-8 no-scrollbar"
+                className="flex-grow max-h-full overflow-y-auto no-scrollbar pt-4"
             />
         </div>
     );

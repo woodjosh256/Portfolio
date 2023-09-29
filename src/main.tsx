@@ -12,6 +12,7 @@ import { About } from "./components/About.tsx";
 import { redirect } from "react-router-dom";
 import { Experience } from "./components/Experience.tsx";
 import { Contact } from "./components/Contact.tsx";
+import { ExpandedExperience } from "./components/ExpandedExperience.tsx";
 
 const router = createBrowserRouter([
     {
@@ -28,8 +29,13 @@ const router = createBrowserRouter([
                 element: <Experience />,
             },
             {
+                path: "/experience/:id",
+                element: <ExpandedExperience />,
+                loader: async ({ params }) => params.id
+            },
+            {
                 path: "/contact",
-                element: <Contact />,
+                element: <Contact />
             },
             {
                 path: "*",
