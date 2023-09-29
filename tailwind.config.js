@@ -1,19 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  mode: 'jit',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-  ],  theme: {
+  ],  
+  utilities: {},
+  theme: {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
       'white': '#ffffff',
       'dark-purple': '#38143D',
-      'off-white': '#EBFEFF',
+      'off-white': '#f8fafd',
       'sea-green': '#2CA6A4',
       'selective-yellow': '#fcba04',
       'big-red': '#C42021',
       'black': '#000000',
+      'gray': '#BFC4CF',
+      'dark-gray': '#6E6E6E',
     },
     extend: {
       fontFamily: {

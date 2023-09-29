@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+/* 
+  .filter-list:hover .filter-list-item:has( + .filter-list-item:hover) {
+    margin-left: 1rem;
+  }
+  .filter-list:hover .filter-list-item:hover + .filter-list-item {
+    margin-left: 1rem;
+  }
+   */
+  
+
+  .sibling-ml:has(+ .sibling-ml:hover),
+  .sibling-ml:hover + .sibling-ml {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
