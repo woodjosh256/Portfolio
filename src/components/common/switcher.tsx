@@ -5,9 +5,9 @@ export function Switcher() {
         <div className="flex flex-row justify-between mb-8">
             <NavLink
                 className={({isActive}) =>{
-                    let classString = `font-slab font-black text-4xl md:text-5xl list-none cursor-pointer select-none hover:text-sea-green `;
+                    let classString = `font-slab font-black text-4xl md:text-5xl list-none cursor-pointer select-none hover:text-selective-yellow `;
                     if (isActive) {
-                        classString += ` text-sea-green`;
+                        classString += ` text-selective-yellow`;
                     } else {
                         classString += ` text-black`;
                     }
@@ -19,9 +19,9 @@ export function Switcher() {
             </NavLink>
             <NavLink
                 className={({isActive}) => {
-                    let classString = `font-slab font-black text-4xl md:text-5xl list-none cursor-pointer select-none hover:text-selective-yellow`;
+                    let classString = `font-slab font-black text-4xl md:text-5xl list-none cursor-pointer select-none hover:text-sea-green`;
                     if (isActive) {
-                        classString += ` text-selective-yellow`;
+                        classString += ` text-sea-green`;
                     } else {
                         classString += ` text-black`;
                     }

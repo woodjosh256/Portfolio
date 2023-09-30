@@ -51,7 +51,7 @@ export function FilterSelector(props: FilterSelectorProps) {
             <div
                 key={key}
                 className={`pl-3 pr-3 text-sm rounded-full font-medium text-center cursor-pointer border-solid border-2 m-1 border-gray hover:border-black flex flex-row items-center ${
-                    entry[1] ? "bg-light-sea-green" : ""
+                    entry[1] ? "bg-light-big-red" : ""
                 }`}
                 onClick={() => {
                     setTagStates((prev) => {
@@ -81,7 +81,7 @@ export function FilterSelector(props: FilterSelectorProps) {
                 <div
                     key={key}
                     className={`pl-3 pr-3 text-sm rounded-full font-medium text-center cursor-pointer border-solid border-2 m-1 border-gray hover:border-black flex flex-row items-center ${
-                        entry[1] ? "bg-light-sea-green" : ""
+                        entry[1] ? "bg-light-selective-yellow" : ""
                     }`}
                     onClick={() => {
                         setExpTypeStates((prev) => {
@@ -105,7 +105,7 @@ export function FilterSelector(props: FilterSelectorProps) {
     );
 
     return (
-        <div className="flex flex-row w-full justify-between select-none pl-12 pr-12 space-x-4">
+        <div className="flex flex-row w-full justify-between select-none space-x-4">
             <div className="flex-1 flex flex-col overflow-auto">
                 <h3 className="font-bold text-dark-gray text-lg ml-1">
                     Type

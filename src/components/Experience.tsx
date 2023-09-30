@@ -83,15 +83,15 @@ export function Experience() {
     return (
         <div
             ref={experienceRef}
-            className="flex-grow flex flex-col h-full max-h-full overflow-y-auto pl-8"
+            className="flex-grow flex flex-col h-full max-h-full md:overflow-auto pl-0 pr-0 ml-0 mr-0 md:pl-12 md:pr-12 md:-ml-12 md:-mr-12"
         >
             <FilterSelector setTagFilters={setTagFilters} setExpTypeFilters={setExpTypeFilters} />
-            <hr className="h-px mt-4 ml-12 mr-12 bg-gray border-0"/>
+            <hr className="h-px w-full mt-4 bg-dark-gray border-1"/>
             <FilterList
                 ref={filterListRef}
                 experienceData={experienceData}
                 setCurrentExperience={setCurrentExperience}
-                className="flex-grow max-h-full overflow-y-auto no-scrollbar pt-4"
+                className="flex-grow max-h-full md:overflow-auto pl-0 pr-0 ml-0 mr-0 md:pl-12 md:pr-12 md:-ml-12 md:-mr-12 no-scrollbar pt-4"
             />
         </div>
     );

@@ -3,33 +3,35 @@
 @tailwind utilities;
 
 @layer components {
-/* 
-  .filter-list:hover .filter-list-item:has( + .filter-list-item:hover) {
-    margin-left: 1rem;
-  }
-  .filter-list:hover .filter-list-item:hover + .filter-list-item {
-    margin-left: 1rem;
-  }
-   */
-  
-
-  .sibling-ml:has(+ .sibling-ml:hover),
-  .sibling-ml:hover + .sibling-ml {
-    margin-left: 1rem;
-    margin-right: 1rem;
+  .hover-filter:hover {
+    filter: invert(61%) sepia(14%) saturate(1889%) hue-rotate(130deg) brightness(89%) contrast(85%);
   }
 }
 
 @layer utilities {
-  /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
 
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
   }
+}
+
+@keyframes expandOutwards {
+  0% {
+    border-image-source: linear-gradient(to right, transparent 50%, black 0%, black 0%, transparent 50%);
+    border-image-slice: 1;
+  }
+  100% {
+    border-image-source: linear-gradient(to right, transparent 0%, black 0%, black 100%, transparent 0%);
+    border-image-slice: 1;
+  }
+}
+
+.animate-expandOutwards {
+  animation: expandOutwards 1s forwards; 
 }
 
 :root {

@@ -21,10 +21,11 @@ export const FilterList = forwardRef<HTMLDivElement, FilterListProps>(
             let year = experienceItemData.data.date.getFullYear();
             if (year < lastYear) {
                 components.push(
-                    <h3 key={"header-"+year} className="pl-4 mt-8 first:mt-0 text-4xl font-slab font-black text-dark-gray">{year}</h3>
+                    <h3 key={"header-"+year} className="mt-8 first:mt-0 text-4xl font-slab font-black text-dark-gray">{year}</h3>
                 )
                 lastYear = year;
             }
+
             components.push(experienceItemData.component);
         });
         
@@ -69,7 +70,7 @@ export const FilterList = forwardRef<HTMLDivElement, FilterListProps>(
             <div
                 ref={ref}
                 id="item-group"
-                className={`flex flex-col select-none pl-8 pb-4 ${props.className}`}
+                className={`flex flex-col select-none pb-4 ${props.className}`}
             >
                 {components}
             </div>
