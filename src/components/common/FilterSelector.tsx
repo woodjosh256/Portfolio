@@ -67,7 +67,7 @@ export function FilterSelector(props: FilterSelectorProps) {
                     });
                 }}
             >
-                {entry[0]}
+                {entry[0].toString() === "CSharp" ? "C#" : entry[0]}
                 {entry[1] ? <LuX className="ml-1" /> : null }
             </div>
         );

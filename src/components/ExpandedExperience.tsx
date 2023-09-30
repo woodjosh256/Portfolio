@@ -18,7 +18,7 @@ export function ExpandedExperience() {
                     <div className="flex-grow" />
                 </div>
                 <h2 className="text-center text-3xl font-bold">{experience.title}</h2>
-                <div className="text-lg">
+                <div className="text-lg [&>ul]:list-disc [&>a]:text-xl [&>a]:p-4 hover:[&>a]:bg-light-sea-green [&>ul]:mb-8 [&>a]:text-black [&>a]:rounded-lg [&>a]:pt-1 [&>a]:pb-1 [&>a]:border-dashed [&>a]:border-2 [&>a]:border-sea-green p-2 md:p-8">
                     {experience.content}
                 </div>
             </div>

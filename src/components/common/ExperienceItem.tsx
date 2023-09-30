@@ -17,16 +17,15 @@ export function ExperienceItem(props: ExperienceItemProps) {
             <div
                 className={`w-full bg-white shadow-lg rounded-lg text-xl p-[.75em] pl-6 pr-6 leading-[1.5em] flex flex-row`}
             >
-                <div className="flex flex-col">
+                <div className="flex flex-col flex-grow">
+                    <div className="flex flex-row">
+                        <h3 className="font-sans font-medium  text-ellipsis line-clamp-2 flex-grow pr-4">
+                            {props.experience.short_description}
+                        </h3>
+                    </div>
                     <h3 className="font-slab font-black text-black text-lg">
                         {props.experience.role}
                     </h3>
-                    <div className="flex flex-row">
-                        <h3 className="font-sans font-medium  text-ellipsis line-clamp-2 flex-grow pr-4">
-                            {props.experience.short_description} +{" "}
-                            {props.experience.date.toString()}
-                        </h3>
-                    </div>
                 </div>
                 <div className="flex flex-col items-center justify-center text-gray group-hover:text-sea-green">
                     <LuArrowUpRightSquare size="2em" />
