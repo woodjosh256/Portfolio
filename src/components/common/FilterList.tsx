@@ -1,4 +1,4 @@
-import { ReactElement, forwardRef, useEffect } from "react";
+import { ReactElement, forwardRef } from "react";
 import { Experience } from "../../assets/data";
 
 interface FilterListProps {
