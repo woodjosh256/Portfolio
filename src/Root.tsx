@@ -1,9 +1,5 @@
-import { ReactNode, useRef, useState } from "react";
-import { Switcher } from "./components/common/Switcher";
-import { About } from "./components/About";
-import { Experience } from "./components/Experience";
-import { Contact } from "./components/Contact";
 import { Outlet } from "react-router-dom";
+import { Switcher } from "./components/common/switcher";
 
 export enum Pages {
     ABOUT,

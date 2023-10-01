@@ -9,7 +9,6 @@ import {
 } from "react-router-dom";
 import ErrorPage from "./ErrorPage.tsx";
 import { About } from "./components/About.tsx";
-import { redirect } from "react-router-dom";
 import { Experience } from "./components/Experience.tsx";
 import { Contact } from "./components/Contact.tsx";
 import { ExpandedExperience } from "./components/ExpandedExperience.tsx";

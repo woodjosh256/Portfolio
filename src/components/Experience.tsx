@@ -1,8 +1,7 @@
-import { ReactNode, useEffect, useReducer, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ExperienceItemData, FilterList } from "./common/FilterList";
 import { ExpTypes, Tags, experiences } from "../assets/data";
 import { ExperienceItem } from "./common/ExperienceItem";
-import { YearScrollBar } from "./common/YearScrollBar";
 import { FilterSelector } from "./common/FilterSelector";
 
 export function Experience() {
@@ -12,8 +11,6 @@ export function Experience() {
 
     const [tagFilters, setTagFilters] = useState<Tags[]>([]);
     const [typeFilters, setExpTypeFilters] = useState<ExpTypes[]>([]);
-
-    const [currentExperience, setCurrentExperience] = useState<number>(0);
 
     const filterListRef = useRef<HTMLDivElement>(null);
     const experienceRef = useRef<HTMLDivElement>(null);
@@ -90,7 +87,6 @@ export function Experience() {
             <FilterList
                 ref={filterListRef}
                 experienceData={experienceData}
-                setCurrentExperience={setCurrentExperience}
                 className="flex-grow max-h-full md:overflow-auto pl-0 pr-0 ml-0 mr-0 md:pl-12 md:pr-12 md:-ml-12 md:-mr-12 no-scrollbar pt-4"
             />
         </div>

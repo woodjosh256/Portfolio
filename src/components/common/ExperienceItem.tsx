@@ -1,6 +1,5 @@
-import { useEffect, useRef, useState } from "react";
 import { Experience } from "../../assets/data";
-import { LuArrowRightSquare, LuArrowUpRightSquare } from "react-icons/lu";
+import { LuArrowUpRightSquare } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
 interface ExperienceItemProps {

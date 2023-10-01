@@ -1,5 +1,3 @@
-import { LuArrowRight } from "react-icons/lu";
-import { Link } from "react-router-dom";
 import { CoolText } from "./common/CoolText";
 import { useEffect, useRef, useState } from "react";
 
