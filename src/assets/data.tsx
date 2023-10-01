@@ -178,7 +178,7 @@ export const experiences: {[key: string]: Experience} = {
 
                 </ul>
                 <div className="flex flex-col items-center justify-center space-y-4 [&>a]:text-xl [&>a]:p-4 hover:[&>a]:bg-light-sea-green [&>a]:text-black [&>a]:rounded-lg [&>a]:pt-1 [&>a]:pb-1 [&>a]:border-dashed [&>a]:border-2 [&>a]:border-sea-green">
-                    <a href="https://replit.com/@joshwood/The-Journey-of-Bella-Shores-5?v=1" target="_blank">Run in the browser</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.joshwoodstudios.circulo" target="_blank">App on Google Play</a>
                 </div>
             </>
         )
