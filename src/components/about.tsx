@@ -30,7 +30,7 @@ export function About() {
             <div className="flex flex-col space-y-6 md:flex-row md:space-y-0 justify-center items-center">
                 <div className="w-1/3 mr-8 md:mr-16 relative">
                     <img
-                        src={"/professional.jpeg"}
+                        src={"./professional.jpeg"}
                         className="relative w-full rounded-xl z-10"
                     />
                     <div className="absolute left-4 top-4 w-full h-full bg-sea-green rounded-xl z-0"></div>
@@ -47,7 +47,7 @@ export function About() {
                     <p className="text-3xl font-bold font-sans">
                         Full stack developer
                     </p>
-                    <a href="https://www.linkedin.com/in/woodjosh256/" target="_blank" className="w-8 h-8 mt-4"><img src="/linkedin.svg" className="w-full h-full hover-filter cursor-pointer"/></a>
+                    <a href="https://www.linkedin.com/in/woodjosh256/" target="_blank" className="w-8 h-8 mt-4"><img src="./linkedin.svg" className="w-full h-full hover-filter cursor-pointer"/></a>
                 </div>
             </div>
 
