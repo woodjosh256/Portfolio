@@ -6,7 +6,7 @@ export enum Tags {
     Web = "Web",
     React = "React",
     Mobile = "Mobile",
-    CSharp = "C#"
+    // CSharp = "C#"
 }
 
 export enum ExpTypes {
@@ -53,7 +53,7 @@ export const experiences: {[key: string]: Experience} = {
         date: new Date(2022, 5),
         short_description: "Completed a diverse array of projects using C# and the .NET framework for Skyward's K-12 school administrative software.",
         role: "Software Engineering Intern",
-        tags: [],
+        tags: [Tags.Web],
         type: ExpTypes.Professional,
         content: (
             <>

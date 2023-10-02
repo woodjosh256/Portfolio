@@ -26,7 +26,7 @@ export function About() {
     }, [showBorder]);
 
     return (
-        <div ref={scrollDiv} className={`flex flex-col text-black overflow-scroll ${showBorder ? 'border-t-2 animate-expandOutwards border-black' : ''}`}>
+        <div ref={scrollDiv} className={`flex flex-col text-black overflow-scroll pl-4 pr-4 md:pl-[16.6%] md:pr-[16.6%] lg:pl-[25%] lg:pr-[25%] flex-grow m-auto ${showBorder ? 'border-t-2 animate-expandOutwards border-black' : ''}`}>
             <div className="flex flex-col space-y-6 md:flex-row md:space-y-0 justify-center items-center">
                 <div className="w-1/3 mr-8 md:mr-16 relative">
                     <img
@@ -54,10 +54,10 @@ export function About() {
             <div className="flex flex-col m-auto mt-16 items-center">
                 <h3 className="text-4xl font-bold font-slab">About</h3>
                 <p className="text-xl font-medium font-sans mt-4 mb-4 p-0 text-center md:pl-18 md:pr-18 xl:pl-24 xl:pr-24">
-                    I'm a creative problem solver who isn't afraid to tackle big challenges. I learn rapidly, have experience with various technologies, and write readable, extendable code.
+                    I'm a creative problem solver who isn't afraid to tackle large challenges. I learn quickly, have experience with various technologies, and write readable, extendable code.
                 </p>
                 <p className="text-xl font-medium font-sans p-0 text-center md:pl-18 md:pr-18 xl:pl-24 xl:pr-24">
-                    I'm also a passionate outdoorsperson. I love hiking and mountain biking and have thru-hiked the Appalachian Trail (2,200 mi). I think the world would be a better place if more people got outside.
+                    I'm also a passionate outdoorsperson. I love hiking and mountain biking and have thru-hiked the Appalachian Trail. I think the world would be a better place if more people got outside.
                 </p>
             </div>
 

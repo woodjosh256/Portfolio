@@ -9,7 +9,7 @@ export function ExpandedExperience() {
 
     return (
         <>
-            <div className="w-full p-4 flex-grow">
+            <div className="w-full p-4 flex-grow pl-4 pr-4 md:pl-[16.6%] md:pr-[16.6%] lg:pl-[25%] lg:pr-[25%] overflow-auto">
                 <div className="flex flex-row">
                     <Link to="/experience" className="flex flex-row items-center ml-2 text-dark-gray hover:ml-0 hover:pr-2 transition-all duration-300 hover:text-black">
                         <LuArrowLeft size="1.5em" />

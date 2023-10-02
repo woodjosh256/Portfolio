@@ -1,6 +1,6 @@
 export function Contact() {
     return (
-        <div className="w-full p-4">
+        <div className="w-full p-4 pl-4 pr-4 md:pl-[16.6%] md:pr-[16.6%] lg:pl-[25%] lg:pr-[25%] flex-grow">
             <h3 className="text-4xl font-bold font-slab text-center">Email</h3>
             <form action="https://formspree.io/f/mknkkbql" method="POST" className="flex flex-col">
                 <input
