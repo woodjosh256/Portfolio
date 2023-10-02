@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export function Switcher() {
     return (
-        <div className="flex flex-row justify-between mb-8 pl-4 pr-4 md:pl-0 md:pr-0 w-full md:w-2/3 lg:w-1/2 m-auto">
+        <div className="flex flex-row justify-between mb-8 pl-4 pr-4 md:pl-0 md:pr-0 w-full md:w-2/3 lg:w-1/2 m-auto sticky">
             <NavLink
                 className={({ isActive }) => {
                     let classString = `font-slab font-black text-2xl lg:text-4xl xl:text-5xl list-none cursor-pointer select-none hover:text-selective-yellow `;
