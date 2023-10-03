@@ -79,7 +79,7 @@ export function About() {
                 </div> */}
             </div>
 
-            <p className="text-center text-sm mb-4">Site designed and developed by Josh. Made in React.</p>
+            <p className="text-center text-sm mb-4">Note: site designed and developed by yours truly.</p>
         </div>
     );
 }

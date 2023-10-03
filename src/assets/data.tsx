@@ -214,13 +214,13 @@ export const experiences: { [key: string]: Experience } = {
         title: "Internship at Skyward",
         date: new Date(2022, 5),
         shortDescription:
-            "Completed a variety of projects for Skyward's K-12 school administrative software.",
+            "Software engineering internship at Skyward, a company that makes K12 school administrative software.",
         role: "Software Engineering Intern",
         tags: [Tags.Web],
         type: ExpTypes.Professional,
         bulletedDesc: [
             "Completed projects transitioning legacy functionality to new school administrative platform.",
-            "Developed for frontend and backend",
+            "Developed for frontend and backend.",
             "Worked on a team of 12 interns (split into 3 subteams) following Agile methodology.",
             "Wrote robust and reversible data migrations for a MySQL database.",
             "Proposed and developed foundation for a Visual Studio plugin that transitioned thousands of hardcoded strings to named constants; team continued project after my internship ended.",
@@ -369,7 +369,7 @@ export const experiences: { [key: string]: Experience } = {
     "circulo": {
         title: "Circulo",
         date: new Date(2018, 2),
-        shortDescription: "Made a reaction timed based game for Android",
+        shortDescription: "Made a reaction timed based game for Android.",
         role: "Personal Project",
         tags: [Tags.Java, Tags.Mobile],
         type: ExpTypes.Other,
