@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react";
-import { LuArrowBigRight, LuArrowRight, LuChevronRight, LuPlus, LuToggleRight } from "react-icons/lu";
+import { LuChevronRight } from "react-icons/lu";
 
 interface ExpSectionProps {
     header: string;
