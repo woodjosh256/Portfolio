@@ -74,12 +74,7 @@ export function About() {
                     <h4 className="text-xl font-medium bg-gray border-dark-sea-green border-2 border-solid rounded-full pl-4 pr-4 pb-1 pt-1 m-6 mb-0">Serverless</h4>
                     <h4 className="text-xl font-medium bg-gray border-dark-sea-green border-2 border-solid rounded-full pl-4 pr-4 pb-1 pt-1 m-6 mb-0">Agile Methodology</h4>
                 </div>
-                {/* <div className="flex flex-row">
-                    <Link to="/experience" className="text-black text-2xl flex flex-row items-center justify-center hover:text-black group">Skills in use<LuArrowRight size="1.25em" className="text-black ml-1 transition-all ease-in-out duration-300 group-hover:ml-3"/></Link>
-                </div> */}
             </div>
-
-            <p className="text-center text-sm mb-4">Note: site designed and developed by yours truly.</p>
         </div>
     );
 }
