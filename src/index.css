@@ -17,6 +17,10 @@
     -ms-overflow-style: none; 
     scrollbar-width: none; 
   }
+
+  .pause {
+    animation-play-state: paused;
+  }
 }
 
 @keyframes expandOutwards {

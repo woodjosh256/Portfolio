@@ -11,176 +11,380 @@ export enum Tags {
 
 export enum ExpTypes {
     Professional = "Professional",
-    Other = "Other"
+    Other = "Other",
+}
+
+export interface Picture {
+    src: string;
+    alt: string;
+    caption?: string;
+}
+
+enum TechType {
+    LANGUAGE,
+    TOOL,
+    DEPLOYMENT,
+}
+
+interface Tech {
+    name: string;
+    logo_src: string;
+    type: TechType;
+}
+
+interface Url {
+    url: string;
+    name: string;
 }
 
 export interface Experience {
     title: string;
     date: Date;
-    short_description: string;
+    shortDescription: string;
     role: string;
     tags: Tags[];
     type?: ExpTypes;
-    content: ReactNode;
+    pictures?: Picture[];
+    tech?: Tech[];
+    links?: Url[];
+    next?: string;
+    bulletedDesc: string[];
 }
 
-export const experiences: {[key: string]: Experience} = {
-    "acromoda": {
+const Techs = {
+    agile: {
+        name: "Agile Methodology",
+        logo_src: "agile.png",
+        type: TechType.TOOL,
+    },
+    android: {
+        name: "Android",
+        logo_src: "android-icon.svg",
+        type: TechType.DEPLOYMENT,
+    },
+    dynamoDb: {
+        name: "DynamoDB",
+        logo_src: "aws-dynamodb.svg",
+        type: TechType.DEPLOYMENT,
+    },
+    lambda: {
+        name: "AWS Lambda",
+        logo_src: "aws-lambda.svg",
+        type: TechType.DEPLOYMENT,
+    },
+    cSharp: {
+        name: "C#",
+        logo_src: "c-sharp.svg",
+        type: TechType.LANGUAGE,
+    },
+    cordova: {
+        name: "Apache Cordova",
+        logo_src: "cordova.svg",
+        type: TechType.TOOL,
+    },
+    css: {
+        name: "CSS",
+        logo_src: "css-3.svg",
+        type: TechType.LANGUAGE,
+    },
+    html: {
+        name: "HTML",
+        logo_src: "html-5.svg",
+        type: TechType.LANGUAGE,
+    },
+    git: {
+        name: "Git",
+        logo_src: "git-icon.svg",
+        type: TechType.TOOL,
+    },
+    java: {
+        name: "Java",
+        logo_src: "java.svg",
+        type: TechType.LANGUAGE,
+    },
+    javascript: {
+        name: "JavaScript",
+        logo_src: "javascript.svg",
+        type: TechType.LANGUAGE,
+    },
+    mapbox: {
+        name: "Mapbox",
+        logo_src: "mapbox-icon.svg",
+        type: TechType.TOOL,
+    },
+    sql: {
+        name: "MySQL",
+        logo_src: "mysql-icon.svg",
+        type: TechType.DEPLOYMENT,
+    },
+    postgres: {
+        name: "PostgreSQL",
+        logo_src: "postgresql.svg",
+        type: TechType.DEPLOYMENT,
+    },
+    python: {
+        name: "Python",
+        logo_src: "python.svg",
+        type: TechType.LANGUAGE,
+    },
+    react: {
+        name: "React",
+        logo_src: "react.svg",
+        type: TechType.TOOL,
+    },
+    sklearn: {
+        name: "Scikit-Learn",
+        logo_src: "scikit-learn.png",
+        type: TechType.TOOL,
+    },
+    tailwind: {
+        name: "Tailwind CSS",
+        logo_src: "tailwindcss-icon.svg",
+        type: TechType.TOOL,
+    },
+    tensorflow: {
+        name: "Tensorflow",
+        logo_src: "tensorflow.svg",
+        type: TechType.TOOL,
+    },
+    typescript: {
+        name: "TypeScript",
+        logo_src: "typescript-icon.svg",
+        type: TechType.LANGUAGE,
+    },
+};
+
+export const experiences: { [key: string]: Experience } = {
+    acromoda: {
         title: "Acromoda",
         date: new Date(2023, 0),
-        short_description: "Created a unique product customizer and designed an accompanying waist pack for the ultralight hiking market.",
+        shortDescription:
+            "Launched an outdoor gear company, designing bags for hikers, including a customizable waist pack with a software component.",
         role: "Owner, Co-Founder",
         tags: [Tags.Python, Tags.Web, Tags.React],
         type: ExpTypes.Professional,
-        content: (
-            <>
-                <ul>
-                    <li>Reached $10,000 revenue over one month via a successfully funded Kickstarter.</li>
-                    <li>Developed MVP product customizer with a serverless architecture using React.js, Python, AWS Lambda, and DynamoDB.</li>
-                    <li>Learned how to design and manufacture outdoor gear.</li>
-                    <li>Devised system that enables the majority of the bag to be made by overseas manufacturing partners with final customization occurring in-house.</li>
-                    <li>Ran pre-launch marketing campaign with PPC advertising, influencer partnerships, and inclusion in relevant online publications.</li>
-                </ul>
-                <div className="flex flex-col items-center justify-center space-y-4 [&>a]:text-xl [&>a]:p-4 hover:[&>a]:bg-light-sea-green [&>a]:text-black [&>a]:rounded-lg [&>a]:pt-1 [&>a]:pb-1 [&>a]:border-dashed [&>a]:border-2 [&>a]:border-sea-green">
-                    <a href="https://www.kickstarter.com/projects/acromoda/acromoda-fanny-pack" target="_blank">Kickstarter</a>
-                    <a href="https://main.d3ohn9pafiuugw.amplifyapp.com/" target="_blank">Product Customizer</a>
-                </div>
-            </>
-        )
+        pictures: [
+            {
+                src: "animation.gif",
+                alt: "animation showing mountain on bag",
+            },
+            {
+                src: "customizer1.jpg",
+                alt: "image of fanny pack customizer",
+            },
+            {
+                src: "customizer2.jpg",
+                alt: "image of fanny pack customizer",
+            },
+            {
+                src: "bag on tree 1360.jpg",
+                alt: "waist pack hanging on tree",
+            },
+        ],
+        bulletedDesc: [
+            "Launched novel waist pack for hikers that’s customizable to commemorate one’s favorite place.",
+            "Developed MVP product customizer as well as software to aid in final manufacturing steps.",
+            "Generated $10,700 in revenue within a month through a successful Kickstarter campaign.",
+            "Accepted into the IDEA Hub Accelerator 2023 cohort. Focused on Lean Startup methodology.",
+            "Learned how to design and manufacture outdoor gear. Partnered with manufacturer in China.",
+            "Ran prelaunch marketing campaign with PPC advertising, partnerships with content creators, and features in relevant online publications.",
+            "Designed other outdoor gear, including a backpack for long distance hiking.",
+        ],
+        tech: [
+            Techs.typescript,
+            Techs.react,
+            Techs.python,
+            Techs.git,
+            Techs.lambda,
+            Techs.dynamoDb,
+            Techs.mapbox,
+            Techs.tailwind,
+        ],
+        links: [
+            {
+                url: "https://www.kickstarter.com/projects/acromoda/acromoda-fanny-pack",
+                name: "Kickstarter",
+            },
+            {
+                url: "https://main.d3ohn9pafiuugw.amplifyapp.com/",
+                name: "Product Customizer",
+            },
+        ],
+        next: "skyward_internship",
     },
-    "skyward_internship": {
+    skyward_internship: {
         title: "Internship at Skyward",
         date: new Date(2022, 5),
-        short_description: "Completed a diverse array of projects using C# and the .NET framework for Skyward's K-12 school administrative software.",
+        shortDescription:
+            "Completed a variety of projects for Skyward's K-12 school administrative software.",
         role: "Software Engineering Intern",
         tags: [Tags.Web],
         type: ExpTypes.Professional,
-        content: (
-            <>
-                <ul>
-                    <li>Projects were primarily focused on transitioning legacy functionality to Skyward’s new QMLATIV platform. </li>
-                    <li>Wrote robust and reversible data migrations for a SQL database.</li>
-                    <li>Practiced agile methodology.</li>
-                    <li>Initiated and developed the foundation for a Visual Studio plugin to enhance the QMLATIV codebase, converting thousands of hardcoded strings to named constants. The project was continued by the team after my internship ended.</li>
-
-                </ul>
-            </>
-        )
+        bulletedDesc: [
+            "Completed projects transitioning legacy functionality to new school administrative platform.",
+            "Developed for frontend and backend",
+            "Worked on a team of 12 interns (split into 3 subteams) following Agile methodology.",
+            "Wrote robust and reversible data migrations for a MySQL database.",
+            "Proposed and developed foundation for a Visual Studio plugin that transitioned thousands of hardcoded strings to named constants; team continued project after my internship ended.",
+        ],
+        tech: [
+            Techs.cSharp,
+            Techs.javascript,
+            Techs.sql,
+            Techs.agile,
+            Techs.git,
+        ],
+        next: "calf_hero",
     },
-    "calf_hero": {
+    calf_hero: {
         title: "Calf Hero",
-        date: new Date(2021, 0),
-        short_description: "Developed interactive data visualization tool used to diagnose problems with colostrum (milk) pasteurizers.",
+        date: new Date(2020, 9),
+        shortDescription:
+            "Developed an interactive data visualization tool used to diagnose problems with colostrum (milk) pasteurizers.",
         role: "Freelance Developer",
         tags: [Tags.Java],
         type: ExpTypes.Professional,
-        content: (
-            <>
-                <ul>
-                    <li>Software analyzes large CSV log files, identifies anomalies, and provides an easy-to-use interface that allows users to see sensor readings at specific time intervals.</li>
-                    <li>Utilized multi-threading and caching techniques to expedite data parsing and visualization. These optimizations were essential as a common usage pattern involved quickly scanning through dozens of log files at once.</li>
-                    <li>Created a cross-platform desktop application built using Java and JavaFX.</li>
-                </ul>
-            </>
-        )
+        bulletedDesc: [
+            "Engineered an interactive data visualization tool for diagnosing colostrum pasteurizer issues; deployed as a cross platform desktop application using Java and JavaFX.",
+            "Optimized data parsing speed with multi-threading and caching to allow near seamless transitions between datasets. This was critical, as quckly scanning through datasets was a common usage pattern.",
+            "Architected application to be extendable and configurable by the business owner (Golden Calf Company).",
+        ],
+        pictures: [
+            {
+                src: "calf_hero.png",
+                alt: "screenshot of calf hero application",
+            },
+        ],
+        tech: [Techs.java, Techs.git],
+        next: "nrc_calculator",
     },
-    "nrc_calculator": {
+    nrc_calculator: {
         title: "NRC Calculator",
         date: new Date(2020, 9),
-        short_description: "Rehired by Milk Products Inc. to create a second mobile app that uses known models to predict the average daily weight gain for dairy cattle.",
+        shortDescription:
+            "Sole developer for mobile app that uses known models to predict the average daily weight gain for dairy cattle.",
         role: "Freelance Developer",
         tags: [Tags.Web, Tags.Mobile],
-        type: ExpTypes.Professional, 
-        content: (
-            <>
-                <ul>
-                    <li>App is available in 6 languages and used daily by farmers globally.</li>
-                    <li>Built using HTML/CSS/JS and packaged for iOS and Android with Apache Cordova.</li>
-                </ul>
-                <div className="flex flex-col items-center justify-center space-y-4 [&>a]:text-xl [&>a]:p-4 hover:[&>a]:bg-light-sea-green [&>a]:text-black [&>a]:rounded-lg [&>a]:pt-1 [&>a]:pb-1 [&>a]:border-dashed [&>a]:border-2 [&>a]:border-sea-green">
-                    <a href="https://www.dairyherd.com/news-news/nrc-calculator-app-answers-what-ifs-calf-nutrition" target="_blank">Featured in Dairy Herd Management</a>
-                </div>
-            </>
-        )
+        type: ExpTypes.Professional,
+        bulletedDesc: [
+            "Application made for Milk Products Inc. (subsidiary of Land O'Lakes).",
+            "Collaborated with scientific and marketing experts to gather requirements and design application.",
+            "Reached global audience with translations in 6 languages.",
+            "Application featured in Dairy Herd Management, a prominent trade publication.",
+        ],
+        tech: [Techs.javascript, Techs.css, Techs.cordova, Techs.git],
+        links: [
+            {
+                url: "https://www.dairyherd.com/news-news/nrc-calculator-app-answers-what-ifs-calf-nutrition",
+                name: "Dairy Herd Management Article",
+            },
+            {
+                url: "https://apps.apple.com/us/app/nrc-calculator/id1515018491",
+                name: "App on the App Store",
+            },
+        ],
+        next: "whole_milk_calculator",
     },
-    "whole_milk_calculator": {
+    whole_milk_calculator: {
         title: "Whole Milk Calculator",
         date: new Date(2019, 5),
-        short_description: "Created a mobile app for Milk Products Inc (subsidiary of Land O’Lakes) that assists dairy farmers in daily operations.",
+        shortDescription:
+            "Created a mobile app for Milk Products Inc. that assists dairy farmers in daily operations.",
         role: "Freelance Developer",
         tags: [Tags.Web, Tags.Mobile],
-        type: ExpTypes.Professional, 
-        content: (
-            <>
-                <ul>
-                    <li>Application calculates the optimal ratio of feeds for farmers to use when caring for their dairy cattle.</li>
-                    <li>App is available on iOS and Android and built using Apache Cordova.</li>
-                </ul>
-                <div className="flex flex-col items-center justify-center space-y-4 [&>a]:text-xl [&>a]:p-4 hover:[&>a]:bg-light-sea-green [&>a]:text-black [&>a]:rounded-lg [&>a]:pt-1 [&>a]:pb-1 [&>a]:border-dashed [&>a]:border-2 [&>a]:border-sea-green">
-                    <a href="https://apps.apple.com/us/app/nrc-calculator/id1515018491" target="_blank">NRC Calculator on the App Store</a>
-                </div>
-            </>
-        )
+        type: ExpTypes.Professional,
+        bulletedDesc: [
+            "Application employs deterministic model to optimize daily feed procedures for dairy famers.",
+            "Maintained app, and was rehired to add features after initial release.",
+            "App is available in 2 languages.",
+        ],
+        tech: [Techs.javascript, Techs.css, Techs.cordova, Techs.git],
+        links: [
+            {
+                url: "https://apps.apple.com/ca/app/whole-milk-calculator/id1488635008",
+                name: "App on the App Store",
+            },
+        ],
+        next: "bella_shores"
     },
-    "bella_shores": {
+    bella_shores: {
         title: "The Journey of Bella Shores",
         date: new Date(2019, 2),
-        short_description: "Created top-down side-scrolling game with simple physics and collisions for an online game jam.",
+        shortDescription:
+            "Created top-down side-scrolling game with simple physics and collisions for an online game jam.",
         role: "Personal Project",
         tags: [Tags.Python],
-        type: ExpTypes.Other, 
-        content: (
-            <>
-                <ul>
-                    <li>Game included combat mechanics, procedurally generated terrain, a trading system and a story mode.</li>
-                    <li>Built with Python using PyGame for graphics.</li>
-                    <li>The game jam was a competition hosted by Repl.it that took place over the course of a month.</li>
-                </ul>
-                <div className="flex flex-col items-center justify-center space-y-4 [&>a]:text-xl [&>a]:p-4 hover:[&>a]:bg-light-sea-green [&>a]:text-black [&>a]:rounded-lg [&>a]:pt-1 [&>a]:pb-1 [&>a]:border-dashed [&>a]:border-2 [&>a]:border-sea-green">
-                    <a href="https://replit.com/@joshwood/The-Journey-of-Bella-Shores-5?v=1" target="_blank">Run in the browser</a>
-                </div>
-            </>
-        )
+        type: ExpTypes.Other,
+        bulletedDesc: [
+            "Game included combat mechanics, procedurally generated terrain, a trading system and a story mode.",
+            "Built with Python using PyGame for graphics.",
+            "The game jam was a competition hosted by Repl.it that took place over the course of a month.",
+        ],
+        links: [
+            {
+                url: "https://replit.com/@joshwood/The-Journey-of-Bella-Shores-5?v=1",
+                name: "Run in the browser (Repl.it)",
+            },
+        ],
+        tech: [Techs.python],
+        pictures: [
+            {
+                src: "bella_shores.png",
+                alt: "screenshot of bella shores game",
+            },
+        ],
+        next: "poe",
     },
-    "poe": {
+    poe: {
         title: "Poe - The Autonomous Poet",
         date: new Date(2019, 1),
-        short_description: "Developed a system that generates nonsensical poetry that illustrates the writing style of whatever text is used to train it.",
+        shortDescription:
+            "Developed a system that generates nonsensical poetry illustrating the writing style of whatever text is used to train it.",
         role: "Personal Project",
         tags: [Tags.Python],
-        type: ExpTypes.Other, 
-        content: (
-            <>
-                <ul>
-                    <li>Uses a Markov Chain algorithm to generate poetry that matches the syllable structure of a haiku, or the syllable and rhyming structure of a sonnet. </li>
-                    <li>Built for an AI-themed code jam run by Repl.it. Was listed as an honorable mention.</li>
-                    <li>Programmed in Python. Syllable data acquired using the Datamuse API.</li>
-
-                </ul>
-                <div className="flex flex-col items-center justify-center space-y-4 [&>a]:text-xl [&>a]:p-4 hover:[&>a]:bg-light-sea-green [&>a]:text-black [&>a]:rounded-lg [&>a]:pt-1 [&>a]:pb-1 [&>a]:border-dashed [&>a]:border-2 [&>a]:border-sea-green">
-                    <a href="https://replit.com/@joshwood/The-Journey-of-Bella-Shores-5?v=1" target="_blank">Run in the browser</a>
-                </div>
-            </>
-        )
+        type: ExpTypes.Other,
+        bulletedDesc: [
+            "Uses a Markov Chain algorithm to generate poetry that matches the syllable structure of a haiku, or the syllable and rhyming structure of a sonnet.",
+            "Built for an AI-themed code jam run by Repl.it. Was listed as an honorable mention.",
+        ],
+        tech: [Techs.python],
+        pictures: [
+            {
+                src: "poe.png",
+                alt: "screenshot of poe program",
+                caption: "Example trained on the works of Edgar Allen Poe",
+            },
+            {
+                src: "poe2.png",
+                alt: "screenshot of poe program",
+                caption: "Example trained on the King James Bible",
+            }
+        ],
+        links: [
+            {
+                url: "https://replit.com/@joshwood/Poe-v03?v=1",
+                name: "Run in the browser (Repl.it)",
+            }
+        ],
+        next: "circulo"
     },
     "circulo": {
         title: "Circulo",
         date: new Date(2018, 2),
-        short_description: "Made a reaction timed based game on Android",
+        shortDescription: "Made a reaction timed based game for Android",
         role: "Personal Project",
         tags: [Tags.Java, Tags.Mobile],
-        type: ExpTypes.Other, 
-        content: (
-            <>
-                <ul>
-                    <li>This simple game tests your reaction time by having you tap circles at specific time intervals.</li>
-                    <li>Native Android app, built using Java</li>
-
-                </ul>
-                <div className="flex flex-col items-center justify-center space-y-4 [&>a]:text-xl [&>a]:p-4 hover:[&>a]:bg-light-sea-green [&>a]:text-black [&>a]:rounded-lg [&>a]:pt-1 [&>a]:pb-1 [&>a]:border-dashed [&>a]:border-2 [&>a]:border-sea-green">
-                    <a href="https://play.google.com/store/apps/details?id=com.joshwoodstudios.circulo" target="_blank">App on Google Play</a>
-                </div>
-            </>
-        )
+        type: ExpTypes.Other,
+        tech: [Techs.java, Techs.android],
+        bulletedDesc: [
+            "Developed simple android game that tests your reaction time.",
+            "Native Android app written in Java.",
+        ],
+        links: [
+            {
+            url: "https://play.google.com/store/apps/details?id=com.joshwoodstudios.circulo",
+            name: "App on Google Play"
+            }
+    ]
     },
-}
+};

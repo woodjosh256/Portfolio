@@ -33,7 +33,7 @@ export function About() {
                         src={"./professional.jpeg"}
                         className="relative w-full rounded-xl z-10"
                     />
-                    <div className="absolute left-4 top-4 w-full h-full bg-sea-green rounded-xl z-0"></div>
+                    <div className="absolute left-2 top-2 w-full h-full bg-light-sea-green rounded-xl z-0"></div>
                 </div>
                 <div className="flex flex-col">
                     <div className="flex flex-row">
@@ -45,7 +45,7 @@ export function About() {
                         </CoolText>
                     </div>
                     <p className="text-3xl font-bold font-sans">
-                        Full stack developer
+                        Full stack developer &<br/> creative problem solver.
                     </p>
                     <a href="https://www.linkedin.com/in/woodjosh256/" target="_blank" className="w-8 h-8 mt-4"><img src="./linkedin.svg" className="w-full h-full hover-filter cursor-pointer"/></a>
                 </div>
@@ -54,10 +54,10 @@ export function About() {
             <div className="flex flex-col m-auto mt-16 items-center">
                 <h3 className="text-4xl font-bold font-slab">About</h3>
                 <p className="text-xl font-medium font-sans mt-4 mb-4 p-0 text-center md:pl-18 md:pr-18 xl:pl-24 xl:pr-24">
-                    I'm a creative problem solver who isn't afraid to tackle large challenges. I learn quickly, have experience with various technologies, and write readable, extendable code.
+                    I'm a recent software engineering graduate who isn't afraid to tackle large challenges. I learn quickly, have experience with various technologies, and write readable, extendable code.
                 </p>
                 <p className="text-xl font-medium font-sans p-0 text-center md:pl-18 md:pr-18 xl:pl-24 xl:pr-24">
-                    I'm also a passionate outdoorsperson. I love hiking and mountain biking and have thru-hiked the Appalachian Trail. I think the world would be a better place if more people got outside.
+                    I'm also a passionate outdoorsperson. I love hiking and mountain biking and have thru-hiked the Appalachian Trail. I think the world would be a better place if more people had the opportunity to get outside.
                 </p>
             </div>
 
@@ -79,6 +79,7 @@ export function About() {
                 </div> */}
             </div>
 
+            <p className="text-center text-sm mb-4">Site designed and developed by Josh. Made in React.</p>
         </div>
     );
 }

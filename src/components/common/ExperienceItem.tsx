@@ -19,7 +19,7 @@ export function ExperienceItem(props: ExperienceItemProps) {
                 <div className="flex flex-col flex-grow">
                     <div className="flex flex-row">
                         <h3 className="font-sans font-medium  text-ellipsis line-clamp-2 flex-grow pr-4">
-                            {props.experience.short_description}
+                            {props.experience.shortDescription}
                         </h3>
                     </div>
                     <h3 className="font-slab font-black text-black text-lg">

@@ -81,7 +81,7 @@ export function Experience() {
         <div className="flex-grow overflow-auto">
             <div
                 ref={experienceRef}
-                className="flex-grow flex flex-col h-full max-h-full pl-0 pr-0 ml-0 mr-0 md:pl-12 md:pr-12 md:-ml-12 md:-mr-12 overflow-clip"
+                className="flex-grow flex flex-col h-full max-h-full"
             >
                 <div className="flex flex-col pl-4 pr-4 md:pl-[16.6%] md:pr-[16.6%] lg:pl-[25%] lg:pr-[25%]">
                     <FilterSelector setTagFilters={setTagFilters} setExpTypeFilters={setExpTypeFilters} />
