@@ -47,8 +47,12 @@ export function About() {
                     <p className="text-3xl font-bold font-sans">
                         Full stack developer &<br/> creative problem solver.
                     </p>
-                    <a href="https://www.linkedin.com/in/woodjosh256/" target="_blank" className="w-8 h-8 mt-4"><img src="./linkedin.svg" className="w-full h-full hover-filter cursor-pointer"/></a>
-                    <a href="https://github.com/woodjosh256/Portfolio" target="_blank" className="w-8 h-8 mt-4"><img src="./github.svg" className="w-full h-full hover-filter cursor-pointer"/></a>
+                    <div className="flex flex-row space-x-4">
+                        <a href="https://www.linkedin.com/in/woodjosh256/" target="_blank" className="w-8 h-8 mt-4"><img
+                            src="./linkedin.svg" className="w-full h-full hover-filter cursor-pointer"/></a>
+                        <a href="https://github.com/woodjosh256" target="_blank" className="w-8 h-8 mt-4"><img
+                            src="./github.svg" className="w-full h-full hover-filter cursor-pointer"/></a>
+                    </div>
                 </div>
             </div>
 
