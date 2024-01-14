@@ -1,19 +1,13 @@
-import {Outlet, useLocation} from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { Switcher } from "./components/common/switcher";
-import {useEffect} from "react";
+
+export enum Pages {
+    ABOUT,
+    EXPERIENCE,
+    CONTACT,
+}
 
 function Root() {
-
-    const location = useLocation();
-
-    useEffect(() => {
-        const redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect != window.location.href) {
-            window.history.replaceState(null, "", new URL(redirect).pathname);
-        }
-    }, [location]);
-
     return (
         <>
             <div className="w-screen h-screen bg-off-white flex justify-center">
